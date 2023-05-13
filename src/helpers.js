@@ -7,6 +7,10 @@ function choice(items) {
 function remove(items, item) {
   const item_index = items.indexOf(item);
   if (item_index >= 0) {
-    items.splice(item_index, 1);
+    return items.splice(item_index, 1)[0];
   }
+
+  return undefined;
 }
+
+export { choice, remove };
